@@ -10,7 +10,7 @@ const RootLayOut = () => {
             <header>
             <Navbar></Navbar>
             </header>
-            <main className='w-11/12 mx-auto'>
+            <main className='w-11/12 mx-auto bg-base-200'>
                 <Outlet></Outlet>
             </main>
             <footer>
