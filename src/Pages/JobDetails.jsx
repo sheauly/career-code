@@ -21,43 +21,7 @@ const JobDetails = () => {
 
 
             </div>
-            <div className="">
-                {/* <table className="table flex justify-center items-center text-center">
-               
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Company</th>
-                        <th>Job</th>
-                        </tr>
-                </thead>
-                <tbody>
-                   
-                    <tr>
-                        
-                        <td className='flex text-center gap-1'><CiStar />{title}</td>
-                        <td>{company}</td>
-                        <td>{jobType}</td>
-                        
-                    </tr>
-                  
-                    <tr>
-                        
-                        <td className='flex text-center gap-1'><CiStar />{category}</td>
-                        <td>{applicationDeadline}</td>
-                        <td>{hr_email}</td>
-                    </tr>
-                  
-                    <tr>
-                        
-                        <td className='flex text-center gap-1'><CiStar />{hr_name}</td>
-                        <td>{status}</td>
-                        <td>{location}</td>
-                    </tr>
-                </tbody>
-            </table> */}
-
-            </div>
+        
             <Link to={`/jobApply/${_id}`}>
                 <div className='justify-center items-center text-center m-5'>
                     <button className=' btn btn-primary'>Apply Now</button>
