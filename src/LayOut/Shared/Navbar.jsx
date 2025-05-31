@@ -4,20 +4,33 @@ import { AuthContext } from '../../context/AuthContext';
 
 const Navbar = () => {
     const { user, logOutUser } = use(AuthContext);
-   
+
 
     const handleLogOut = () => {
         logOutUser()
-        .then(() => {
-            console.log('log out user' )
-        })
+            .then(() => {
+                console.log('log out user')
+            })
             .catch(error => {
-            console.log(error)
-        })
+                console.log(error)
+            })
     }
 
     const Links = <>
         <li><NavLink to='/'>Home</NavLink></li>
+        { /*for applicant links. cheak roles as well*/}
+
+        {
+            user && <>
+                <li><NavLink to='/myApplications'>My Applications</NavLink></li>
+            </>
+        }
+        {/*for recruter. check as well */}
+        {
+            user && <>
+                <li><NavLink to='/addJob'>Add Job</NavLink></li>
+            </>
+        }
     </>
     return (
         <div className="navbar bg-gray-100 w-11/12 mx-auto shadow-sm">
@@ -41,14 +54,14 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 {
-                    user ? <button onClick={handleLogOut} className='btn'>Log Out</button>:
+                    user ? <button onClick={handleLogOut} className='btn'>Log Out</button> :
                         <>
                             <NavLink to="/register" className='btn' >Register</NavLink>
                             <NavLink to="/login" className='btn' >Login</NavLink>
                         </>
                 }
             </div>
-      </div>
+        </div>
     );
 };
 
