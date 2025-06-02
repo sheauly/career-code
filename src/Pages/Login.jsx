@@ -10,13 +10,13 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const from = location.state || '/';
-    console.log('location in sign in page', location);
+    // console.log('location in sign in page', location);
     const handleLogin = e => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password)
+        // console.log(email, password)
         // createUser
         signInUser (email, password)
             .then(result => {

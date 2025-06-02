@@ -10,12 +10,12 @@ const AddJobs = () => {
         const form = e.target;
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries())
-        console.log(data)
+        // console.log(data)
        
         // process salary range data
         const { min, max, currency, ...newJob } = data;
         newJob.salaryRange = {min, max, currency}
-        console.log(newJob)
+        // console.log(newJob)
 
         // process requirments
         const requirementsString = newJob.requirments;
