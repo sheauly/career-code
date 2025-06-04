@@ -3,7 +3,7 @@ import ApplicationStats from './ApplicationStats';
 import ApplicationList from './ApplicationList';
 import useAuth from '../hooks/useAuth';
 import { MyApplicationsPromise } from '../api/applicationApi';
-import JobApplicationRow from './JobApplicationRow';
+
 
 const MyApplications = () => {
     const { user } = useAuth();

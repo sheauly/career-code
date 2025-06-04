@@ -23,7 +23,7 @@ const ApplicationList = ({MyApplicationsPromise}) => {
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    
                         {
                             applications.map((application, index) => <JobApplicationRow
                                 application={application}
@@ -33,7 +33,7 @@ const ApplicationList = ({MyApplicationsPromise}) => {
                        }
                       
                      
-                    </tbody>
+                   
                   
                 </table>
             </div>
